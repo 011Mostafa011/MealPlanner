@@ -19,9 +19,6 @@ public class Ingredients {
         this.ID = ID;
     }
 
-    //Todo: save Ingredients image variable provided by API
-    //private String imgHtml;
-
 
 
 
