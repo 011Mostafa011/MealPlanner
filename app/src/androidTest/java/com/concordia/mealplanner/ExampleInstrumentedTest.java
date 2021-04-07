@@ -1,4 +1,4 @@
-package com.concordia.mealplannes;
+package com.concordia.mealplanner;
 
 import android.content.Context;
 
