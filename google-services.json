@@ -1,33 +1,33 @@
 {
   "project_info": {
-    "project_number": "772920355488",
-    "project_id": "meal-planner-bab11",
-    "storage_bucket": "meal-planner-bab11.appspot.com"
+    "project_number": "94462579717",
+    "project_id": "mealplanner-e3125",
+    "storage_bucket": "mealplanner-e3125.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:772920355488:android:4363b8e5120844a54fb7c5",
+        "mobilesdk_app_id": "1:94462579717:android:a698c1673b4e787506386c",
         "android_client_info": {
           "package_name": "com.concordia.mealplanner"
         }
       },
       "oauth_client": [
         {
-          "client_id": "772920355488-6dn1s4gi4mjau9vesb292qee4notqtcq.apps.googleusercontent.com",
+          "client_id": "94462579717-g40ggfj3ur9spaqo0215rnak0lojj02p.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyDNZtPBkH9KMlgYszKBJ_2flI0TzXxTGEk"
+          "current_key": "AIzaSyBKmSKKQ7UAw3ThJUnEEc5o3QZK5UkCzwA"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "772920355488-6dn1s4gi4mjau9vesb292qee4notqtcq.apps.googleusercontent.com",
+              "client_id": "94462579717-g40ggfj3ur9spaqo0215rnak0lojj02p.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
