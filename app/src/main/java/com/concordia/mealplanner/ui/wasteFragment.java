@@ -12,24 +12,26 @@ import com.concordia.mealplanner.R;
 
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link searchFragment#newInstance} factory method to
+ * Use the {@link wasteFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class searchFragment extends Fragment {
+public class wasteFragment extends Fragment {
 
-    public searchFragment() {
+    public wasteFragment() {
         // Required empty public constructor
     }
+
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_search, container, false);
+        return inflater.inflate(R.layout.fragment_waste, container, false);
     }
 }

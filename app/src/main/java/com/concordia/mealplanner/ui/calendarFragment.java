@@ -3,11 +3,14 @@ package com.concordia.mealplanner.ui;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.concordia.mealplanner.Adapter.calendarAdapter;
 import com.concordia.mealplanner.R;
 
 /**
@@ -16,51 +19,32 @@ import com.concordia.mealplanner.R;
  * create an instance of this fragment.
  */
 public class calendarFragment extends Fragment {
-
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-    private static final String ARG_PARAM1 = "param1";
-    private static final String ARG_PARAM2 = "param2";
-
-    // TODO: Rename and change types of parameters
-    private String mParam1;
-    private String mParam2;
-
+    private String days[];
+    private RecyclerView recyclerView;
     public calendarFragment() {
         // Required empty public constructor
-    }
-
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment calendarFragment.
-     */
-    // TODO: Rename and change types and number of parameters
-    public static calendarFragment newInstance(String param1, String param2) {
-        calendarFragment fragment = new calendarFragment();
-        Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
-        fragment.setArguments(args);
-        return fragment;
     }
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
-        }
+
+
+
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+        View view = inflater.inflate(R.layout.fragment_calendar, container, false);
+        recyclerView = view.findViewById(R.id.recyclerViewC);
+        days = getResources().getStringArray(R.array.days_of_the_week);
+        calendarAdapter cAdapter = new calendarAdapter(this,days);
+        recyclerView.setLayoutManager(new LinearLayoutManager(recyclerView.getContext()));
+        recyclerView.setAdapter(cAdapter);
+
+
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_calendar, container, false);
+        return view;
     }
 }

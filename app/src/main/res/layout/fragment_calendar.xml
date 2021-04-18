@@ -1,14 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/cardview_shadow_end_color"
     tools:context=".ui.calendarFragment">
 
     <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="CALENDAR" />
 
-</FrameLayout>
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="407dp"
+        android:layout_height="43dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="94dp"
+        android:layout_marginEnd="2dp"
+        android:layout_marginBottom="16dp"
+        android:text="CALENDAR"
+        app:layout_constraintBottom_toTopOf="@+id/recyclerViewC"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewC"
+        android:layout_width="413dp"
+        android:layout_height="603dp"
+        android:layout_marginBottom="112dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

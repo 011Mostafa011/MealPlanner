@@ -4,10 +4,9 @@ import android.os.Bundle;
 import android.view.MenuItem;
 
 import com.concordia.mealplanner.ui.calendarFragment;
-import com.concordia.mealplanner.ui.fridgeFragment;
 import com.concordia.mealplanner.ui.groceryFragment;
-import com.concordia.mealplanner.ui.savedMealsFragment;
 import com.concordia.mealplanner.ui.searchFragment;
+import com.concordia.mealplanner.ui.wasteFragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import androidx.annotation.NonNull;
@@ -19,9 +18,8 @@ public class MainActivity extends AppCompatActivity {
 
     private Fragment calendarFrag;
     private Fragment groceryFrag;
-    private Fragment savedMealsFrag;
     private Fragment searchFrag;
-    private Fragment fridgeFrag;
+    private Fragment wasteFrag;
 
 
     @Override
@@ -29,15 +27,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
-       // BottomNavigationView navView = findViewById(R.id.nav_view);
-//        // Passing each menu ID as a set of Ids because each
-//        // menu should be considered as top level destinations.
-//        AppBarConfiguration appBarConfiguration = new AppBarConfiguration.Builder(
-//                R.id.navigation_home, R.id.navigation_dashboard, R.id.navigation_notifications)
-//                .build();
-//        NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
-//        NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
-//        NavigationUI.setupWithNavController(navView, navController);
         BottomNavigationView bottomNavigationView = findViewById(R.id.nav_view);
         bottomNavigationView.setSelectedItemId(R.id.calendar);
         bottomNavigationView.setOnNavigationItemSelectedListener(navListener);
@@ -45,9 +34,8 @@ public class MainActivity extends AppCompatActivity {
         if (savedInstanceState == null) {
             calendarFrag = new calendarFragment();
             groceryFrag = new groceryFragment();
-            savedMealsFrag = new savedMealsFragment();
             searchFrag = new searchFragment();
-            fridgeFrag = new fridgeFragment();
+            wasteFrag = new wasteFragment();
         }
 
         ft.add(R.id.fragment_container, calendarFrag, "C");
@@ -76,12 +64,10 @@ public class MainActivity extends AppCompatActivity {
                     }
                     // Hide fragment
                     if (groceryFrag.isAdded()) { ft.hide(groceryFrag); }
-                    // Hide fragment
-                    if (savedMealsFrag.isAdded()) { ft.hide(savedMealsFrag); }
                     //Hide fragment
                     if (searchFrag.isAdded()) { ft.hide(searchFrag); }
                     //Hide fragment
-                    if (fridgeFrag.isAdded()) { ft.hide(fridgeFrag); }
+                    if (wasteFrag.isAdded()) { ft.hide(wasteFrag); }
                     // Commit changes
                     ft.commit();
                     break;
@@ -91,20 +77,8 @@ public class MainActivity extends AppCompatActivity {
                     }
                     else { ft.add(R.id.fragment_container, groceryFrag, "G"); }
                     if (calendarFrag.isAdded()) { ft.hide(calendarFrag); }
-                    if (savedMealsFrag.isAdded()) { ft.hide(savedMealsFrag); }
                     if (searchFrag.isAdded()) { ft.hide(searchFrag); }
-                    if (fridgeFrag.isAdded()) { ft.hide(fridgeFrag); }
-                    ft.commit();
-                    break;
-                case R.id.savedMeals:
-                    if (savedMealsFrag.isAdded()) {
-                        ft.show(savedMealsFrag);
-                    }
-                    else { ft.add(R.id.fragment_container, savedMealsFrag, "SVM"); }
-                    if (calendarFrag.isAdded()) { ft.hide(calendarFrag); }
-                    if (groceryFrag.isAdded()) { ft.hide(groceryFrag); }
-                    if (searchFrag.isAdded()) { ft.hide(searchFrag); }
-                    if (fridgeFrag.isAdded()) { ft.hide(fridgeFrag); }
+                    if (wasteFrag.isAdded()) { ft.hide(wasteFrag); }
                     ft.commit();
                     break;
                 case R.id.searchMeal:
@@ -113,20 +87,18 @@ public class MainActivity extends AppCompatActivity {
                     }
                     else { ft.add(R.id.fragment_container, searchFrag, "SM"); }
                     if (calendarFrag.isAdded()) { ft.hide(calendarFrag); }
-                    if (savedMealsFrag.isAdded()) { ft.hide(savedMealsFrag); }
                     if (groceryFrag.isAdded()) { ft.hide(groceryFrag); }
-                    if (fridgeFrag.isAdded()) { ft.hide(fridgeFrag); }
+                    if (wasteFrag.isAdded()) { ft.hide(wasteFrag); }
                     ft.commit();
                     break;
-                case R.id.fridge:
-                    if (fridgeFrag.isAdded()) {
-                        ft.show(fridgeFrag);
+                case R.id.waste:
+                    if (wasteFrag.isAdded()) {
+                        ft.show(wasteFrag);
                     }
-                    else { ft.add(R.id.fragment_container, fridgeFrag, "F"); }
+                    else { ft.add(R.id.fragment_container, wasteFrag, "F"); }
                     if (calendarFrag.isAdded()) { ft.hide(calendarFrag); }
                     if (groceryFrag.isAdded()) { ft.hide(groceryFrag); }
                     if (searchFrag.isAdded()) { ft.hide(searchFrag); }
-                    if (savedMealsFrag.isAdded()) { ft.hide(savedMealsFrag); }
                     ft.commit();
                     break;
             }//end of switch
