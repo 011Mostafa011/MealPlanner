@@ -1,6 +1,5 @@
 package com.concordia.mealplanner.Adapter;
 
-import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -15,6 +14,7 @@ import com.concordia.mealplanner.ui.calendarFragment;
 public class calendarAdapter extends RecyclerView.Adapter<calendarAdapter.MyViewHolder> {
     String data[];
     calendarFragment context;
+
     public calendarAdapter(calendarFragment ct , String[] days){
         context = ct;
         data = days;
@@ -43,7 +43,7 @@ public class calendarAdapter extends RecyclerView.Adapter<calendarAdapter.MyView
         TextView daysText, breakfast, lunch, diner;
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
-            daysText = itemView.findViewById(R.id.daystextView);
+            daysText = itemView.findViewById(R.id.ingredientTextView);
             breakfast = itemView.findViewById(R.id.btextView);
             lunch = itemView.findViewById(R.id.ltextView);
             diner = itemView.findViewById(R.id.dtextView);
