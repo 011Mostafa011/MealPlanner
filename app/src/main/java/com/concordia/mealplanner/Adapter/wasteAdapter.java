@@ -52,8 +52,6 @@ public class wasteAdapter extends RecyclerView.Adapter<wasteAdapter.MyViewHolder
             super(itemView);
             ingredientImage = itemView.findViewById(R.id.ingredientImageView);
             ingredientText = itemView.findViewById(R.id.ingredientTextView);
-            yesButton = itemView.findViewById(R.id.yesButton);
-            noButton = itemView.findViewById(R.id.noButton);
         }
     }
 }

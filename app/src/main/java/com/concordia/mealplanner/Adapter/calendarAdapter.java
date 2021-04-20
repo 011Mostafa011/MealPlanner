@@ -40,13 +40,13 @@ public class calendarAdapter extends RecyclerView.Adapter<calendarAdapter.MyView
     }
 
     public class MyViewHolder extends RecyclerView.ViewHolder {
-        TextView daysText, breakfast, lunch, diner;
+        TextView daysText, breakfast, lunch, dinner;
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
-            daysText = itemView.findViewById(R.id.dtextView);
+            daysText = itemView.findViewById(R.id.daysTextView);
             breakfast = itemView.findViewById(R.id.btextView);
             lunch = itemView.findViewById(R.id.ltextView);
-            diner = itemView.findViewById(R.id.dtextView);
+            dinner = itemView.findViewById(R.id.dtextView);
         }
     }
 }

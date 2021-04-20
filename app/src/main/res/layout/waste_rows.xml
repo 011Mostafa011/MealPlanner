@@ -55,29 +55,29 @@
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@android:drawable/ic_menu_report_image" />
 
-        <Button
-            android:id="@+id/yesButton"
-            android:layout_width="45dp"
-            android:layout_height="45dp"
-            android:background="@drawable/check_box"
+        <CheckBox
+            android:id="@+id/checkBox2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:buttonTint="#B4EC54"
+            android:text="Yes"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/noButton"
-            app:layout_constraintHorizontal_bias="0.275"
             app:layout_constraintStart_toEndOf="@+id/ingredientTextView"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.533" />
+            app:layout_constraintTop_toTopOf="parent" />
 
-        <Button
-            android:id="@+id/noButton"
-            android:layout_width="45dp"
-            android:layout_height="45dp"
-            android:layout_marginEnd="4dp"
-            android:background="@drawable/check_box"
-            android:clickable="true"
+        <CheckBox
+            android:id="@+id/checkBox3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="6dp"
+            android:buttonTint="#DD4D4D"
+            android:text="No"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/checkBox2"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.533" />
+            app:layout_constraintVertical_bias="0.481" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
