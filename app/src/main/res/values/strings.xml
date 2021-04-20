@@ -6,6 +6,9 @@
     <string name="title_search">Search</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="wasted_food_questionnaire">Wasted Food Questionnaire</string>
+    <string name="confirm">CONFIRM</string>
+    <string name="ingredient">Ingredient</string>
 
     <string-array name="days_of_the_week">
         <item>Sunday</item>
@@ -15,6 +18,10 @@
         <item>Thursday</item>
         <item>Friday</item>
         <item>Saturday</item>
+    </string-array>
 
+    <string-array name="ingredients_of_the_week">
+        <item>chicken</item>
+        <item>fries</item>
     </string-array>
 </resources>
