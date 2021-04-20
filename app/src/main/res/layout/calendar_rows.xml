@@ -28,7 +28,7 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <TextView
-            android:id="@+id/ingredientTextView"
+            android:id="@+id/daysTextView"
             android:layout_width="143dp"
             android:layout_height="28dp"
             android:layout_marginStart="16dp"
@@ -52,7 +52,7 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/ltextView"
             app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toEndOf="@+id/ingredientTextView"
+            app:layout_constraintStart_toEndOf="@+id/daysTextView"
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
