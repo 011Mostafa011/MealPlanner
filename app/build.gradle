@@ -1,8 +1,8 @@
 
 plugins {
     id 'com.android.application'
+    id 'com.google.gms.google-services'
 }
-apply plugin: 'com.google.gms.google-services'
 
 android {
     compileSdkVersion 30
@@ -36,17 +36,19 @@ android {
 }
 
 dependencies {
-
     implementation 'androidx.appcompat:appcompat:1.2.0'
 
-    implementation platform('com.google.firebase:firebase-bom:26.8.0')
-    implementation 'com.google.firebase:firebase-analytics'
+
     // Dependencies for working with Architecture components
     // You'll probably have to update the version numbers in build.gradle (Project)
 
     // Room components
     implementation "androidx.room:room-runtime:$rootProject.roomVersion"
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'com.google.firebase:firebase-auth:20.0.4'
+    implementation 'com.google.firebase:firebase-firestore:22.1.2'
+    implementation 'com.google.firebase:firebase-storage:19.2.2'
+    implementation 'com.google.firebase:firebase-database:19.7.0'
     annotationProcessor "androidx.room:room-compiler:$rootProject.roomVersion"
     androidTestImplementation "androidx.room:room-testing:$rootProject.roomVersion"
 
@@ -60,7 +62,7 @@ dependencies {
     // UI
 //    implementation "androidx.constraintlayout:constraintlayout:$rootProject.constraintLayoutVersion"
 //    implementation "com.google.android.material:material:$rootProject.materialVersion"
-    //Todo: If error follows because of wrong dependencies try uncomenting the above.
+    //Todo: If error follows because of wrong dependencies try uncommenting the above.
     implementation 'com.google.android.material:material:1.3.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
 
