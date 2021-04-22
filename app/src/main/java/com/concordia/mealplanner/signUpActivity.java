@@ -23,6 +23,8 @@ import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
+import java.util.HashMap;
+
 public class signUpActivity extends AppCompatActivity {
     private FirebaseAuth mAuth;
     String TAG="signUpActivity";
@@ -99,16 +101,71 @@ public class signUpActivity extends AppCompatActivity {
 
                             //Direct the user to the mainActivity after successfully signing up
                             Intent intent = new Intent(signUpActivity.this, MainActivity.class);
-                            //save full name
-                            intent.putExtra("fullName",name);
-                            startActivity(intent);
-
-
 
                             FirebaseUser user = mAuth.getCurrentUser();
                             currentUser = FirebaseAuth.getInstance().getCurrentUser().getUid();
-                            reference = FirebaseDatabase.getInstance().getReference().child("users");
-                            reference.setValue(currentUser);
+                            //save full name
+                            intent.putExtra("fullName",name);
+                            startActivity(intent);
+                            HashMap<String, Object> hashMap = new HashMap<>();
+                            reference = FirebaseDatabase.getInstance().getReference().child("users").child(currentUser);
+                            hashMap.put("fullname", name);
+                            reference.setValue(hashMap);
+                            hashMap.clear();
+                            hashMap.put("selected", false);
+                            hashMap.put("recipe","");
+                            reference = FirebaseDatabase.getInstance().getReference().child("users").child(currentUser).child("Sunday").child("diner");
+                            reference.setValue(hashMap);
+                            reference = FirebaseDatabase.getInstance().getReference().child("users").child(currentUser).child("Sunday").child("lunch");
+                            reference.setValue(hashMap);
+                            reference = FirebaseDatabase.getInstance().getReference().child("users").child(currentUser).child("Sunday").child("breakfast");
+                            reference.setValue(hashMap);
+
+                            reference = FirebaseDatabase.getInstance().getReference().child("users").child(currentUser).child("Monday").child("dinner");
+                            reference.setValue(hashMap);
+                            reference = FirebaseDatabase.getInstance().getReference().child("users").child(currentUser).child("Monday").child("lunch");
+                            reference.setValue(hashMap);
+                            reference = FirebaseDatabase.getInstance().getReference().child("users").child(currentUser).child("Monday").child("breakfast");
+                            reference.setValue(hashMap);
+
+                            reference.setValue(hashMap);
+                            reference = FirebaseDatabase.getInstance().getReference().child("users").child(currentUser).child("Tuesday").child("dinner");
+                            reference.setValue(hashMap);
+                            reference = FirebaseDatabase.getInstance().getReference().child("users").child(currentUser).child("Tuesday").child("lunch");
+                            reference.setValue(hashMap);
+                            reference = FirebaseDatabase.getInstance().getReference().child("users").child(currentUser).child("Tuesday").child("breakfast");
+                            reference.setValue(hashMap);
+
+
+                            reference = FirebaseDatabase.getInstance().getReference().child("users").child(currentUser).child("Wednesday").child("dinner");
+                            reference.setValue(hashMap);
+                            reference = FirebaseDatabase.getInstance().getReference().child("users").child(currentUser).child("Wednesday").child("lunch");
+                            reference.setValue(hashMap);
+                            reference = FirebaseDatabase.getInstance().getReference().child("users").child(currentUser).child("Wednesday").child("breakfast");
+                            reference.setValue(hashMap);
+
+                            reference = FirebaseDatabase.getInstance().getReference().child("users").child(currentUser).child("Thursday").child("dinner");
+                            reference.setValue(hashMap);
+                            reference = FirebaseDatabase.getInstance().getReference().child("users").child(currentUser).child("Thursday").child("lunch");
+                            reference.setValue(hashMap);
+                            reference = FirebaseDatabase.getInstance().getReference().child("users").child(currentUser).child("Thursday").child("breakfast");
+                            reference.setValue(hashMap);
+
+                            reference = FirebaseDatabase.getInstance().getReference().child("users").child(currentUser).child("Friday").child("dinner");
+                            reference.setValue(hashMap);
+                            reference = FirebaseDatabase.getInstance().getReference().child("users").child(currentUser).child("Friday").child("lunch");
+                            reference.setValue(hashMap);
+                            reference = FirebaseDatabase.getInstance().getReference().child("users").child(currentUser).child("Friday").child("breakfast");
+                            reference.setValue(hashMap);
+
+                            reference = FirebaseDatabase.getInstance().getReference().child("users").child(currentUser).child("Saturday").child("dinner");
+                            reference.setValue(hashMap);
+                            reference = FirebaseDatabase.getInstance().getReference().child("users").child(currentUser).child("Saturday").child("lunch");
+                            reference.setValue(hashMap);
+                            reference = FirebaseDatabase.getInstance().getReference().child("users").child(currentUser).child("Saturday").child("breakfast");
+                            reference.setValue(hashMap);
+
+
 
 
                         } else {
