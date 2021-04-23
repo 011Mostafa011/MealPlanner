@@ -45,6 +45,12 @@
         <item>Asian Garlic Noodle</item>
     </string-array>
 
+    <string-array name="breakfast">
+        <item>waffles</item>
+        <item>Maple French Toast</item>
+    </string-array>
+
+
     <string-array name="ingredient_quantity">
         <item>2</item>
         <item>3</item>
