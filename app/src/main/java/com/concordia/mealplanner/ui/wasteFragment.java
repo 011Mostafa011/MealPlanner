@@ -33,7 +33,7 @@ public class wasteFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_waste, container, false);
-        recyclerView = view.findViewById(R.id.recyclerViewGrocery);
+        recyclerView = view.findViewById(R.id.recyclerViewWaste);
         ingredients = getResources().getStringArray(R.array.ingredients_of_the_week);
         wasteAdapter wAdapter = new wasteAdapter(this, ingredients, images);
         recyclerView.setLayoutManager(new LinearLayoutManager(recyclerView.getContext()));

@@ -49,33 +49,33 @@
             android:layout_width="59dp"
             android:layout_height="57dp"
             android:layout_marginStart="10dp"
-            android:contentDescription="TODO"
+            android:contentDescription="@string/todo"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@android:drawable/ic_menu_report_image" />
 
         <CheckBox
-            android:id="@+id/ingredientCheckBox"
+            android:id="@+id/yesCheckBox"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:buttonTint="#B4EC54"
-            android:text="Yes"
+            android:text="@string/yes"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toEndOf="@+id/ingredientTextView"
             app:layout_constraintTop_toTopOf="parent" />
 
         <CheckBox
-            android:id="@+id/checkBox3"
+            android:id="@+id/noCheckBox"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="6dp"
             android:buttonTint="#DD4D4D"
-            android:text="No"
+            android:text="@string/no"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toEndOf="@+id/ingredientCheckBox"
+            app:layout_constraintStart_toEndOf="@+id/yesCheckBox"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.481" />
 
