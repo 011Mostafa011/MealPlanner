@@ -50,7 +50,7 @@ public class wasteAdapter extends RecyclerView.Adapter<wasteAdapter.MyViewHolder
         Button yesButton, noButton;
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
-            ingredientImage = itemView.findViewById(R.id.ingredientImageView);
+            ingredientImage = itemView.findViewById(R.id.fridgeDishImageView);
             ingredientText = itemView.findViewById(R.id.ingredientTextView);
         }
     }
