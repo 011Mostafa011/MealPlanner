@@ -9,6 +9,13 @@
     <string name="wasted_food_questionnaire">Wasted Food Questionnaire</string>
     <string name="confirm">CONFIRM</string>
     <string name="ingredient">Ingredient</string>
+    <string name="grocery_list">Grocery List</string>
+    <string name="add_an_ingredient">Add an Ingredient</string>
+    <string name="add_ingredient">Add Ingredient</string>
+    <string name="quantity">Quantity</string>
+    <string name="todo">TODO</string>
+    <string name="no">No</string>
+    <string name="yes">Yes</string>
 
     <string-array name="days_of_the_week">
         <item>Sunday</item>
@@ -23,5 +30,29 @@
     <string-array name="ingredients_of_the_week">
         <item>chicken</item>
         <item>fries</item>
+    </string-array>
+
+    <string-array name="suggested_fridge_dishes">
+        <item>Burger</item>
+        <item>Chicken Escalope</item>
+        <item>Spaghetti Bolognese</item>
+    </string-array>
+
+    <string-array name="favorite_dishes">
+        <item>Taco Salad</item>
+        <item>Butter Chicken</item>
+        <item>Paella</item>
+        <item>Asian Garlic Noodle</item>
+    </string-array>
+
+    <string-array name="breakfast">
+        <item>waffles</item>
+        <item>Maple French Toast</item>
+    </string-array>
+
+
+    <string-array name="ingredient_quantity">
+        <item>2</item>
+        <item>3</item>
     </string-array>
 </resources>
