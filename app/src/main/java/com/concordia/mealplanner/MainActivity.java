@@ -3,6 +3,7 @@ package com.concordia.mealplanner;
 import android.os.Bundle;
 import android.view.MenuItem;
 
+import com.concordia.mealplanner.localVariables.Ingredients;
 import com.concordia.mealplanner.ui.calendarFragment;
 import com.concordia.mealplanner.ui.groceryFragment;
 import com.concordia.mealplanner.ui.searchFragment;
@@ -13,6 +14,9 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
+import androidx.recyclerview.widget.RecyclerView;
+
+import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
 
