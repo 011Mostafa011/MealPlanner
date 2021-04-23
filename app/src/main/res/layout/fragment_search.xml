@@ -15,6 +15,7 @@
         app:layout_constraintHorizontal_bias="0.461"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/favMealsTextView"
+        android:background="@color/lightGray"
         tools:layout_editor_absoluteY="74dp" />
 
     <androidx.recyclerview.widget.RecyclerView
