@@ -32,6 +32,19 @@
         <item>fries</item>
     </string-array>
 
+    <string-array name="suggested_fridge_dishes">
+        <item>Burger</item>
+        <item>Chicken Escalope</item>
+        <item>Spaghetti Bolognese</item>
+    </string-array>
+
+    <string-array name="favorite_dishes">
+        <item>Taco Salad</item>
+        <item>Butter Chicken</item>
+        <item>Paella</item>
+        <item>Asian Garlic Noodle</item>
+    </string-array>
+
     <string-array name="ingredient_quantity">
         <item>2</item>
         <item>3</item>
