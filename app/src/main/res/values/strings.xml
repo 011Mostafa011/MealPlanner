@@ -28,8 +28,21 @@
     </string-array>
 
     <string-array name="ingredients_of_the_week">
-        <item>chicken</item>
-        <item>fries</item>
+        <item>Flour</item>
+        <item>Salt</item>
+        <item>Baking powder</item>
+    </string-array>
+
+    <string-array name="ingredients_in_fridge">
+        <item>Flour</item>
+        <item>Salt</item>
+        <item>Baking powder</item>
+        <item>Chicken</item>
+        <item>Fries</item>
+        <item>Spaghetti</item>
+        <item>Parmesean cheese</item>
+        <item>Tomato sauce</item>
+        <item>Ground beef</item>
     </string-array>
 
     <string-array name="suggested_fridge_dishes">
@@ -52,7 +65,14 @@
 
 
     <string-array name="ingredient_quantity">
-        <item>2</item>
-        <item>3</item>
+        <item>4 lb(s)</item>
+        <item>2 lb(s)</item>
+        <item>1 lb(s)</item>
+        <item>1</item>
+        <item>1</item>
+        <item>1</item>
+        <item>1</item>
+        <item>1</item>
+        <item>1</item>
     </string-array>
 </resources>

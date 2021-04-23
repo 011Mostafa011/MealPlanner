@@ -22,7 +22,7 @@ import com.concordia.mealplanner.R;
 public class wasteFragment extends Fragment {
     private String ingredients[];
     private RecyclerView recyclerView;
-    int images[] = {R.drawable.chicken, R.drawable.fries};
+    int images[] = {R.drawable.flour, R.drawable.salt_img, R.drawable.baking_powder, R.drawable.chicken, R.drawable.fries, R.drawable.pasta_img, R.drawable.parmesan_cheese, R.drawable.tomato_sauce, R.drawable.beef};
     Button test;
     Activity context;
     SharedPreferences sp;
@@ -45,7 +45,7 @@ public class wasteFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_waste, container, false);
 
         recyclerView = view.findViewById(R.id.recyclerViewWaste);
-        ingredients = getResources().getStringArray(R.array.ingredients_of_the_week);
+        ingredients = getResources().getStringArray(R.array.ingredients_in_fridge);
         wasteAdapter wAdapter = new wasteAdapter(this, ingredients, images);
         recyclerView.setLayoutManager(new LinearLayoutManager(recyclerView.getContext()));
         recyclerView.setAdapter(wAdapter);

@@ -26,7 +26,7 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerViewGrocery"
         android:layout_width="409dp"
-        android:layout_height="752dp"
+        android:layout_height="654dp"
         android:layout_marginTop="25dp"
         android:textAlignment="center"
         app:layout_constraintBottom_toBottomOf="parent"

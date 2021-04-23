@@ -33,7 +33,7 @@ public class groceryFragment extends Fragment {
 
     private String ingredients[];
     private RecyclerView recyclerView;
-    private int[] quantity;
+    private String[] quantity;
 
     String TAG = "groceryFragment";
 
@@ -57,7 +57,7 @@ public class groceryFragment extends Fragment {
 
         recyclerView = view.findViewById(R.id.recyclerViewGrocery);
         ingredients = getResources().getStringArray(R.array.ingredients_of_the_week);
-        quantity = getResources().getIntArray(R.array.ingredient_quantity);
+        quantity = getResources().getStringArray(R.array.ingredient_quantity);
         groceryAdapter gAdapter = new groceryAdapter(this, ingredients, quantity);
         recyclerView.setLayoutManager(new LinearLayoutManager(recyclerView.getContext()));
         recyclerView.setAdapter(gAdapter);
