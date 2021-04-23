@@ -119,9 +119,13 @@ public class calendarFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         t1 =(TextView) context.findViewById(R.id.sunB);
+        t2 =(TextView) context.findViewById(R.id.tb1);
+        t3 =(TextView) context.findViewById(R.id.frib);
         sp = this.getActivity().getSharedPreferences("Res", Context.MODE_PRIVATE);
         String brackF = sp.getString("breakfast","");
         t1.setText(brackF);
+        t2.setText(brackF);
+        t3.setText(brackF);
 
 
 

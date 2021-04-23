@@ -35,6 +35,7 @@ import com.concordia.mealplanner.R;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
+import com.concordia.mealplanner.SearchActivity;
 import com.concordia.mealplanner.chooseWeekdayMealActivity;
 import com.google.android.material.appbar.AppBarLayout;
 import com.google.android.material.bottomappbar.BottomAppBarTopEdgeTreatment;
@@ -91,8 +92,10 @@ public class searchFragment extends Fragment {
         searchBar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                showSearchBarDialog();
+                //showSearchBarDialog();
                 //showChooseWeekdayDialog();
+                Intent intent = new Intent(context, SearchActivity.class);
+                context.startActivity ( intent );
             }
         });
 

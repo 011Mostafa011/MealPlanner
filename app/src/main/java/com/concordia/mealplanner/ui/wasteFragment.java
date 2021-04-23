@@ -67,7 +67,7 @@ public class wasteFragment extends Fragment {
             public void onClick(View view) {
 
                 SharedPreferences.Editor editor = sp.edit();
-                editor.putString("breakfast", "waffles");
+                editor.putString("breakfast", "Waffles");
                 editor.commit();
 
 
