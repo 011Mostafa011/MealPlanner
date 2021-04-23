@@ -9,6 +9,10 @@
     <string name="wasted_food_questionnaire">Wasted Food Questionnaire</string>
     <string name="confirm">CONFIRM</string>
     <string name="ingredient">Ingredient</string>
+    <string name="grocery_list">Grocery List</string>
+    <string name="add_an_ingredient">Add an Ingredient</string>
+    <string name="add_ingredient">Add Ingredient</string>
+    <string name="quantity">Quantity</string>
 
     <string-array name="days_of_the_week">
         <item>Sunday</item>
@@ -23,5 +27,10 @@
     <string-array name="ingredients_of_the_week">
         <item>chicken</item>
         <item>fries</item>
+    </string-array>
+
+    <string-array name="ingredient_quantity">
+        <item>2</item>
+        <item>3</item>
     </string-array>
 </resources>

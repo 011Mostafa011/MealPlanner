@@ -25,7 +25,7 @@
         app:layout_constraintVertical_bias="0.063" />
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerViewWaste"
+        android:id="@+id/recyclerViewGrocery"
         android:layout_width="410dp"
         android:layout_height="578dp"
         android:layout_marginTop="25dp"
@@ -49,7 +49,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/recyclerViewWaste"
+        app:layout_constraintTop_toBottomOf="@+id/recyclerViewGrocery"
         app:layout_constraintVertical_bias="1.0" />
 
     <TextView
@@ -60,7 +60,7 @@
         android:text="Wasted?"
         android:textColor="#000000"
         android:textSize="18sp"
-        app:layout_constraintBottom_toTopOf="@+id/recyclerViewWaste"
+        app:layout_constraintBottom_toTopOf="@+id/recyclerViewGrocery"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.923"
         app:layout_constraintStart_toStartOf="parent"
