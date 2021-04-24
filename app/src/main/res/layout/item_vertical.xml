@@ -27,10 +27,11 @@
                 android:layout_height="40dp"
                 android:text="Favorite Recipe"
                 android:textAlignment="center"
-                app:layout_constraintTop_toBottomOf="@id/favoriteDishImage"
+                android:textColor="#040303"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent">
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/favoriteDishImage">
 
             </TextView>
 

@@ -38,12 +38,14 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.023" />
 
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/floatingActionButton2"
-        android:layout_width="115dp"
-        android:layout_height="51dp"
-        android:clickable="true"
-        android:src="@drawable/grocery_basket"
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewGrocery"
+        android:layout_width="409dp"
+        android:layout_height="654dp"
+        android:layout_marginTop="25dp"
+        android:textAlignment="center"
+
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.955"

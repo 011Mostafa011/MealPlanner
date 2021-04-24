@@ -26,31 +26,27 @@
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerViewWaste"
-        android:layout_width="410dp"
-        android:layout_height="578dp"
+        android:layout_width="406dp"
+        android:layout_height="483dp"
         android:layout_marginTop="25dp"
         android:textAlignment="center"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/titleTextView"
-        app:layout_constraintVertical_bias="0.116" />
+        app:layout_constraintTop_toBottomOf="@+id/titleTextView" />
 
     <Button
         android:id="@+id/confirmButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
-        android:layout_marginBottom="100dp"
-        android:background="#FCA43C"
+        android:layout_marginStart="154dp"
+        android:layout_marginTop="47dp"
+        android:layout_marginEnd="155dp"
+        android:background="@drawable/rounded_button"
         android:text="@string/confirm"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/recyclerViewWaste"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintTop_toBottomOf="@+id/recyclerViewWaste" />
 
     <TextView
         android:id="@+id/thrownTextView"

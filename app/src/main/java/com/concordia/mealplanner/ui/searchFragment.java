@@ -2,6 +2,10 @@ package com.concordia.mealplanner.ui;
 
 import android.app.Activity;
 import android.app.AlertDialog;
+import android.content.Context;
+import android.content.DialogInterface;
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -15,27 +19,40 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.SearchView;
+import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.concordia.mealplanner.Adapter.HorizontalRecyclerViewAdapter;
 import com.concordia.mealplanner.Adapter.VerticalRecyclerViewAdapter;
+import com.concordia.mealplanner.MainActivity;
 import com.concordia.mealplanner.R;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
+import com.concordia.mealplanner.SearchActivity;
+import com.concordia.mealplanner.chooseWeekdayMealActivity;
 import com.google.android.material.appbar.AppBarLayout;
+import com.google.android.material.bottomappbar.BottomAppBarTopEdgeTreatment;
 
 
 public class searchFragment extends Fragment {
     TextView favMealsTextView;
     TextView availableIngTextView;
     ImageView searchBar;
+    TextView wafflesEditText;
+    ImageView waffleImageView;
+    Button confirmWeekdayMealButton;
+    Button testButton;
 
     Activity context;
+
+    SharedPreferences sp;
 
     //vertical view
 
@@ -65,6 +82,8 @@ public class searchFragment extends Fragment {
                              Bundle savedInstanceState) {
         context = getActivity();
 
+        sp = this.getActivity().getSharedPreferences("Res", Context.MODE_PRIVATE);
+
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_search, container, false);
 
@@ -73,9 +92,13 @@ public class searchFragment extends Fragment {
         searchBar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                showSearchBarDialog();
+                //showSearchBarDialog();
+                //showChooseWeekdayDialog();
+                Intent intent = new Intent(context, SearchActivity.class);
+                context.startActivity ( intent );
             }
         });
+
 
 
         //vertical recycler view
@@ -118,6 +141,40 @@ public class searchFragment extends Fragment {
 
     }
 
+    private void showChooseWeekdayDialog() {
+        //inflate layout for this dialog
+        View view = LayoutInflater.from(getActivity()).inflate(R.layout.dialog_choose_weekday, null);
+
+        final Button confirmButton = (Button) view.findViewById(R.id.confirmButton);
+
+        final AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
+        //set view to dialog
+        builder.setView(view);
+        final AlertDialog dialog = builder.create();
+        dialog.show();
+        /*
+        confirmButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // adds new ingredient here
+                confirmWeekdayMealButton = (Button) context.findViewById(R.id.confirmButton);
+                confirmWeekdayMealButton.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+
+                        SharedPreferences.Editor editor = sp.edit();
+                        editor.putString("breakfast", "waffles");
+                        editor.commit();
+
+
+                    }
+                });
+
+                dialog.dismiss();
+            }
+        });*/
+    }
+
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
@@ -139,7 +196,49 @@ public class searchFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 // adds new ingredient here
+                waffleImageView = (ImageView) context.findViewById(R.id.waffleImageView);
+                wafflesEditText = (TextView) context.findViewById(R.id.wafflesEditText);
 
+
+
+
+
+
+               /* waffleImageView.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        dialog.setButton("OK", new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int which) {
+                                dialog.dismiss();
+                                return;
+                            }
+                        });
+                        showChooseWeekdayDialog();
+
+                        Toast toast = Toast.makeText(context, "test", Toast.LENGTH_LONG);
+                        toast.show();
+                        showChooseWeekdayDialog();
+                    }
+                });*/
+
+                wafflesEditText.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        showChooseWeekdayDialog();
+                    }
+                });
+
+                testButton.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Toast toast = Toast.makeText(context, "test", Toast.LENGTH_LONG);
+                        toast.show();
+
+                        dialog.dismiss();
+
+                    }
+                });
+                showChooseWeekdayDialog();
 
                 dialog.dismiss();
             }

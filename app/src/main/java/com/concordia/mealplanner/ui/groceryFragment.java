@@ -26,7 +26,11 @@ public class groceryFragment extends Fragment {
     private ArrayList<Ingredients> groceryList;
     private String ingredients[];
     private RecyclerView recyclerView;
-    int images[] = {R.drawable.chicken, R.drawable.fries};
+
+    private String[] quantity;
+
+    String TAG = "groceryFragment";
+
 
     public groceryFragment() {
         // Required empty public constructor
@@ -46,7 +50,10 @@ public class groceryFragment extends Fragment {
 
         recyclerView = view.findViewById(R.id.recyclerGroceryView);
         ingredients = getResources().getStringArray(R.array.ingredients_of_the_week);
-        groceryListAdapter gAdapter = new groceryListAdapter(this, ingredients, images);
+
+        quantity = getResources().getStringArray(R.array.ingredient_quantity);
+        groceryAdapter gAdapter = new groceryAdapter(this, ingredients, quantity);
+
         recyclerView.setLayoutManager(new LinearLayoutManager(recyclerView.getContext()));
         recyclerView.setAdapter(gAdapter);
 

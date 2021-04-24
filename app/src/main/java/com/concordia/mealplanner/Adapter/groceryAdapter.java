@@ -16,11 +16,13 @@ import com.concordia.mealplanner.ui.groceryFragment;
 
 public class groceryAdapter extends RecyclerView.Adapter<groceryAdapter.MyViewHolder> {
     String data[];
+    String quantity[];
     groceryFragment context;
 
-    public groceryAdapter(groceryFragment ct, String[] ingredients, int[] quantity){
+    public groceryAdapter(groceryFragment ct, String[] ingredients, String[] ingQuantity){
         context = ct;
         data = ingredients;
+        quantity = ingQuantity;
     }
 
 
@@ -35,6 +37,7 @@ public class groceryAdapter extends RecyclerView.Adapter<groceryAdapter.MyViewHo
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
         holder.ingredientText.setText(data[(position)]);
+        holder.quantityText.setText(quantity[(position)]);
     }
 
     @Override
@@ -49,6 +52,7 @@ public class groceryAdapter extends RecyclerView.Adapter<groceryAdapter.MyViewHo
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
             ingredientText = itemView.findViewById(R.id.ingredientTextView);
+            quantityText = itemView.findViewById(R.id.quantityTextView);
         }
     }
 }
