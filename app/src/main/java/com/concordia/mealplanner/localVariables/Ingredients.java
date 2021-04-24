@@ -14,12 +14,9 @@ public class Ingredients {
 
     @Getter @Setter (AccessLevel.PROTECTED)
     private int quantity;
-
+    private int images;
     public Ingredients(@NonNull int ID){
         this.ID = ID;
     }
-
-
-
 
 }
